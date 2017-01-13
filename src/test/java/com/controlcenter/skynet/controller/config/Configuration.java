@@ -25,7 +25,7 @@ public class Configuration extends net.masterthought.cucumber.Configuration {
         this.apiEndPoint=apiEndPoint;
         this.setTagsToExcludeFromChart("@Ignore");
         //TODO make all this in config file
-        this.platformName="android";
+        this.platformName="ios";
     }
 
     public String getFacadeType(){return this.facadeType;}

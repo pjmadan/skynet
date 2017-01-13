@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         tags = {"~@Ignore"},
         dryRun = false,
         glue = { "com.mobile.skynet.teststeps" },
-        features = "src/test/resources/features/mobile-features/mobile-android-features"
+        features = "src/test/resources/features/mobile-features/mobile-ios-features"
 )
 public class CucumberRunnerTest
 {
