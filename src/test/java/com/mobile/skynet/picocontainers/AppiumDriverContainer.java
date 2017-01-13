@@ -1,6 +1,7 @@
 package com.mobile.skynet.picocontainers;
 
 import com.controlcenter.skynet.controller.manager.TestManager;
+import com.skynet.common.utils.ConfigurationHelper;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -32,8 +33,8 @@ public class AppiumDriverContainer {
 
     public AppiumDriverContainer() {
         try {
-            TestManager manager = new TestManager();
-            this.platformName=manager.getConfiguration().getPlatformName();
+            ConfigurationHelper configurationHelper = new ConfigurationHelper();
+            this.platformName=configurationHelper.getpropertyvalue(("platformName"));
 
             if (!IS_INITIALIZED) {
                 if (platformName.equalsIgnoreCase("android")) {
