@@ -53,14 +53,11 @@ public class HomeScreen {
 
     }
 
-    public boolean istextpresent(String text)
-    {
+    public boolean istextpresent(String text) {
 
         if (text.equalsIgnoreCase(hometext.getText())) {
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }

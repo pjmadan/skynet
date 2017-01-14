@@ -63,14 +63,14 @@ public class Steps {
     @Then("^I should see a the label for ColumnChartActivity$")
     public void i_should_see_a_the_label_for_ColumnChartActivity() throws Throwable {
 
-        ColumnChartActivityScreen columnChartActivityScreen=new ColumnChartActivityScreen(driver);
+        ColumnChartActivityScreen columnChartActivityScreen = new ColumnChartActivityScreen(driver);
         Assert.assertTrue(columnChartActivityScreen.istextpresent("columnchartactivity"));
     }
 
     @Then("^I should see a Column Chart$")
     public void i_should_see_a_Column_Chart() throws Throwable {
 
-        ColumnChartActivityScreen columnChartActivityScreen=new ColumnChartActivityScreen(driver);
+        ColumnChartActivityScreen columnChartActivityScreen = new ColumnChartActivityScreen(driver);
         Assert.assertTrue(columnChartActivityScreen.ischartpresent());
     }
 

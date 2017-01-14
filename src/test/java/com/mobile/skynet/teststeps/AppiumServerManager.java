@@ -26,14 +26,14 @@ public class AppiumServerManager {
                 System.out.println("Appium server Is started now.");
             }
 
-        }  catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
 
     public void stopserver() {
-        if (service!= null) {
+        if (service != null) {
             service.stop();
         }
         System.out.println("Appium server Is stopped now.");

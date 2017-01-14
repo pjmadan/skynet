@@ -10,35 +10,29 @@ public class ConfigurationHelper {
 
     private static Configuration configuration;
 
-    public ConfigurationHelper()
-    {
+    public ConfigurationHelper() {
 
         TestManager manager = new TestManager();
-        configuration=manager.getConfiguration();
+        configuration = manager.getConfiguration();
     }
 
 
-    public String getpropertyvalue(String propertyname)
-    {
-        String value="";
-        if (propertyname.equalsIgnoreCase("facade"))
-        {
-             value = configuration.getFacadeType();
+    public String getpropertyvalue(String propertyname) {
+        String value = "";
+        if (propertyname.equalsIgnoreCase("facade")) {
+            value = configuration.getFacadeType();
         }
 
-        if (propertyname.equalsIgnoreCase("platformName"))
-        {
+        if (propertyname.equalsIgnoreCase("platformName")) {
             value = configuration.getPlatformName();
         }
 
 
-        if (propertyname.equalsIgnoreCase("apiendpoint"))
-        {
+        if (propertyname.equalsIgnoreCase("apiendpoint")) {
             value = configuration.getapiEndPoint();
         }
 
-        if (propertyname.equalsIgnoreCase("browserstotest"))
-        {
+        if (propertyname.equalsIgnoreCase("browserstotest")) {
             value = configuration.getbrowsersToTest();
         }
 

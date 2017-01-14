@@ -34,7 +34,7 @@ public class AppiumDriverContainer {
     public AppiumDriverContainer() {
         try {
             ConfigurationHelper configurationHelper = new ConfigurationHelper();
-            this.platformName=configurationHelper.getpropertyvalue(("platformName"));
+            this.platformName = configurationHelper.getpropertyvalue(("platformName"));
 
             if (!IS_INITIALIZED) {
                 if (platformName.equalsIgnoreCase("android")) {

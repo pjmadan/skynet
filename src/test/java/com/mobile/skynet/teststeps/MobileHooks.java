@@ -22,9 +22,7 @@ public class MobileHooks {
             driver.removeApp("lecho.lib.hellocharts.samples");
             driver.installApp("/Users/prajitmadan/Library/Android/sdk/platform-tools/test.apk");
             driver.launchApp();
-        }
-        else
-        {
+        } else {
             driver.installApp("/Users/prajitmadan/Library/Android/sdk/platform-tools/test.apk");
             driver.launchApp();
         }
@@ -41,7 +39,7 @@ public class MobileHooks {
     public void runbeforeios() {
 
         AppiumDriverContainer driverContainer = new AppiumDriverContainer();
-        driver=driverContainer.getDriver("ios");
+        driver = driverContainer.getDriver("ios");
         if (driver.isAppInstalled("simulator.app")) {
             System.out.println("THE APP IS INSTALLED. UNINSTALLING...");
             driver.removeApp("IntegrationApp.app");
@@ -50,9 +48,7 @@ public class MobileHooks {
 
             // this will give us element information for xcui
             System.out.println(driver.getPageSource());
-        }
-        else
-        {
+        } else {
             driver.installApp("/Users/prajitmadan/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Build/Products/Debug-iphonesimulator/IntegrationApp.app");
             driver.launchApp();
         }
