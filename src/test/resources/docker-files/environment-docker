@@ -8,25 +8,9 @@ FROM java:8
 MAINTAINER Prajit Madan
 
 
-# Update the repository sources list
-#RUN apt-get update
-#RUN echo "export JAVA_HOME=Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/#Home" >> ~/.bash_profile
-
-#RUN echo "export PATH=usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/#JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home:/Users/prajitmadan/Library/Android/#sdk:/Users/prajitmadan/Library/Android/sdk/build-tools/25.0.2:/Users/prajitmadan/Library/#Android/sdk/platform-tools:/Users/prajitmadan/Library/Android/sdk/tools" >> #~/.bash_profile
-
-
-#RUN echo "export CLASSPATH=/Users/prajitmadan/Documents/workspace" >> ~/.bash_profile
-
-
-#
-# Oracle Java 8 Dockerfile
-#
-# https://github.com/dockerfile/java
-# https://github.com/dockerfile/java/tree/master/oracle-java8
-#
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install Java.
 RUN \
@@ -39,7 +23,7 @@ RUN \
 
 
 # Define working directory.
-WORKDIR /data
+WORKDIR /Documents/workspace
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
