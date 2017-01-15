@@ -1,2 +1,54 @@
-# Creating a docker image in which the automation tests will run
+
+############################################################
+# This docker file will create an image which will be
+# used to run the Automation framework
+############################################################
+FROM java:8
+
+MAINTAINER Prajit Madan
+
+
+# Update the repository sources list
+#RUN apt-get update
+#RUN echo "export JAVA_HOME=Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/#Home" >> ~/.bash_profile
+
+#RUN echo "export PATH=usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/#JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home:/Users/prajitmadan/Library/Android/#sdk:/Users/prajitmadan/Library/Android/sdk/build-tools/25.0.2:/Users/prajitmadan/Library/#Android/sdk/platform-tools:/Users/prajitmadan/Library/Android/sdk/tools" >> #~/.bash_profile
+
+
+#RUN echo "export CLASSPATH=/Users/prajitmadan/Documents/workspace" >> ~/.bash_profile
+
+
+#
+# Oracle Java 8 Dockerfile
+#
+# https://github.com/dockerfile/java
+# https://github.com/dockerfile/java/tree/master/oracle-java8
+#
+
+# Pull base image.
+FROM dockerfile/ubuntu
+
+# Install Java.
+RUN \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java8-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
+
+
+# Define working directory.
+WORKDIR /data
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+ENV PATH usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home:/Users/prajitmadan/Library/Android/sdk:/Users/prajitmadan/Library/Android/sdk/build-tools/25.0.2:/Users/prajitmadan/Library/Android/sdk/platform-tools:/Users/prajitmadan/Library/Android/sdk/tools
+
+
+# Define default command.
+CMD ["bash"]
+
+
 
