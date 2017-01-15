@@ -1,0 +1,17 @@
+############################################################
+# This docker file will create an image which will be
+# used to run the Automation framework
+############################################################
+FROM java:8
+
+MAINTAINER Prajit Madan
+
+USER skynet
+
+# Update the repository sources list
+RUN apt-get update
+
+
+
+
+
