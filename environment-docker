@@ -5,7 +5,7 @@
 ############################################################
 
 
-FROM openjdk:7-jdk
+FROM openjdk:8-jdk
 MAINTAINER Prajit Madan
 
 ARG MAVEN_VERSION=3.3.9
